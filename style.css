@@ -76,6 +76,10 @@ body {
 }
 
 @media (max-width:750px) {
+    .container {
+        height: auto;
+    }
+
     .grid_layout {
         width: 90%;
     }
