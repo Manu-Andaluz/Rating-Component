@@ -26,10 +26,6 @@ for (let i = 1; i <= 5; i++) {
     ratingElement.innerText = i
     ratingElement.classList.add('rating_element')
 
-    ratingElement.addEventListener('click', () => {
-        ratingElement.classList.add('focus')
-    })
-
     ratingElement.addEventListener('mouseover', () => {
         ratingElement.classList.add('active')
     })
@@ -42,7 +38,7 @@ for (let i = 1; i <= 5; i++) {
 }
 
 const button = document.createElement('button')
-button.innerText = 'Submit'
+button.innerText = 'SUBMIT'
 button.classList.add('btn')
 
 gridLayout.append(fristIcon, title, aboutText, containerRating, button)

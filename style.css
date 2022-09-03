@@ -27,9 +27,9 @@ body {
 }
 
 .grid_layout {
-    width: 50%;
+    width: 40%;
     background-color: var(--container-color);
-    padding: 2rem;
+    padding: 2rem 4rem;
     display: grid;
     gap: 2rem;
     color: white;
@@ -70,18 +70,27 @@ body {
 }
 
 .btn {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 12px 0;
     border: none;
     border-radius: 50px;
     background-color: var(--main-color);
     cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
     transition: all .2s ease-in-out;
 }
 
 .btn:hover {
     background-color: var(--btn-hover-color);
+}
+
+.btn:focus {
+    color: var(--btn-hover-color);
+    background-color: white;
 }
 
 .remove {
