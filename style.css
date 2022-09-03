@@ -12,6 +12,7 @@ body {
 }
 
 :root {
+    --main-color: hsl(25, 97%, 53%);
     --font-color: white;
     --body-color: hsl(216, 12%, 8%);
     --container-color: hsl(213, 19%, 18%);
@@ -53,6 +54,15 @@ body {
     background-color: hsla(216, 12%, 54%, 0.253);
     border-radius: 50%;
     padding: .8rem 1.3rem;
+    transition: all .1s ease-in-out;
+}
+
+.over_active {
+    background-color: red;
+}
+
+.active {
+    background-color: var(--main-color) !important;
 }
 
 .btn {
@@ -61,6 +71,12 @@ body {
     padding: 12px 0;
     border: none;
     border-radius: 50px;
-    background-color: hsl(25, 97%, 53%);
+    background-color: var(--main-color);
     cursor: pointer;
+}
+
+@media (max-width:750px) {
+    .grid_layout {
+        width: 90%;
+    }
 }
