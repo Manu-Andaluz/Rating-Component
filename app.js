@@ -1,5 +1,5 @@
 const body = document.body
-
+// Creating the first page
 const container = document.createElement('div')
 container.classList.add('container')
 body.append(container)
@@ -24,31 +24,23 @@ containerRating.classList.add('container_rating')
 for (let i = 1; i <= 5; i++) {
     const ratingElement = document.createElement('a')
     ratingElement.innerText = i
+    ratingElement.classList.add('rating_element')
+
+    ratingElement.addEventListener('mouseover', (e) => {
+        ratingElement.classList.add('active')
+    })
+
+    ratingElement.addEventListener('mouseleave', (e) => {
+        ratingElement.classList.remove('active')
+    })
+
     containerRating.append(ratingElement)
 }
 
-gridLayout.append(fristIcon, title, aboutText, containerRating)
+const button = document.createElement('button')
+button.innerText = 'Submit'
+button.classList.add('btn')
 
-// Rating numbers hover events
-// let ratingElement = document.getElementsByClassName('ratingElement')
-// console.dir(ratingElement)
-// function changeBackgrund() {
-//     for (let i = 0; i <= ratingElement.length - 1; i++) {
-//         ratingElement[i].addEventListener('mouseover', (e) => {
-//             ratingElement[i].classList.add('active')
-//         })
+gridLayout.append(fristIcon, title, aboutText, containerRating, button)
 
-//         ratingElement[i].addEventListener('mouseleave', (e) => {
-//             ratingElement[i].classList.remove('active')
-//         })
-//     }
-// }
-
-// changeBackgrund()
-
-// // Button submit event
-
-// const button = document.getElementById('Btn')
-// button.addEventListener('click', () => {
-
-// })
+// Creating second Page

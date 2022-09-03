@@ -48,13 +48,14 @@ body {
     align-items: center;
 }
 
-.container_rating a {
+.rating_element {
     text-decoration: none;
     color: hsl(217, 12%, 63%);
     background-color: hsla(216, 12%, 54%, 0.253);
     border-radius: 50%;
     padding: .8rem 1.3rem;
     transition: all .1s ease-in-out;
+    cursor: pointer;
 }
 
 .over_active {
