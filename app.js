@@ -26,11 +26,15 @@ for (let i = 1; i <= 5; i++) {
     ratingElement.innerText = i
     ratingElement.classList.add('rating_element')
 
-    ratingElement.addEventListener('mouseover', (e) => {
+    ratingElement.addEventListener('click', () => {
+        ratingElement.classList.add('focus')
+    })
+
+    ratingElement.addEventListener('mouseover', () => {
         ratingElement.classList.add('active')
     })
 
-    ratingElement.addEventListener('mouseleave', (e) => {
+    ratingElement.addEventListener('mouseleave', () => {
         ratingElement.classList.remove('active')
     })
 
@@ -44,3 +48,11 @@ button.classList.add('btn')
 gridLayout.append(fristIcon, title, aboutText, containerRating, button)
 
 // Creating second Page
+
+button.addEventListener('click', () => {
+    fristIcon.src = 'images/illustration-thank-you.svg'
+    title.innerText = 'Thanks you!'
+    aboutText.innerText = `We appreciate you taking the time to give a rating, if you ever need more support, don't hesitate to get in touch`
+    containerRating.classList.add('remove')
+    button.classList.add('remove')
+})
