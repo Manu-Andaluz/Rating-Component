@@ -52,15 +52,17 @@ ratingArr.forEach(element => {
     element.addEventListener('click', () => ratingScore = element)
 })
 
-
-
 button.addEventListener('click', () => {
-    fristIcon.src = 'images/illustration-thank-you.svg'
-    scoreText.classList.add('score')
-    scoreText.innerText = `You selected ${ratingScore.innerText} out of 5`
-    title.innerText = 'Thanks you!'
-    aboutText.innerText = `We appreciate you taking the time to give a rating, if you ever need more support, don't hesitate to get in touch`
-    containerRating.classList.add('remove')
-    button.classList.add('remove')
+    if (ratingScore.innerText >= 1) {
+        fristIcon.src = 'images/illustration-thank-you.svg'
+        scoreText.classList.add('score')
+        scoreText.innerText = `You selected ${ratingScore.innerText} out of 5`
+        title.innerText = 'Thanks you!'
+        aboutText.innerText = `We appreciate you taking the time to give a rating, if you ever need more support, don't hesitate to get in touch`
+        containerRating.classList.add('remove')
+        button.classList.add('remove')
+    } else {
+        alert('Select a valid number')
+    }
 
 })

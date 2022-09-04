@@ -29,6 +29,7 @@ body {
 
 .grid_layout {
     width: 40%;
+    height: 75vh;
     background-color: var(--container-color);
     padding: 2rem 4rem;
     display: grid;
@@ -95,6 +96,7 @@ img {
 
 .score {
     width: fit-content;
+    height: fit-content;
     color: var(--btn-hover-color);
     padding: 8px 15px;
     background-color: hsla(216, 12%, 54%, 0.253);
