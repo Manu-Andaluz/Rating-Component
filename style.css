@@ -61,12 +61,12 @@ body {
 
 .focus {
     color: white;
-    background-color: var(--main-color) !important;
+    background-color: hsl(25, 97%, 53%);
 }
 
 .active {
     color: white;
-    background-color: var(--main-color) !important;
+    background-color: hsl(217, 12%, 63%);
 }
 
 .btn {
@@ -104,5 +104,6 @@ body {
 
     .grid_layout {
         width: 90%;
+        padding: 1.5rem 1rem;
     }
 }

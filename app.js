@@ -22,17 +22,13 @@ const containerRating = document.createElement('div')
 containerRating.classList.add('container_rating')
 
 for (let i = 1; i <= 5; i++) {
-    const ratingElement = document.createElement('a')
+    const ratingElement = document.createElement('btn')
     ratingElement.innerText = i
     ratingElement.classList.add('rating_element')
 
-    ratingElement.addEventListener('mouseover', () => {
-        ratingElement.classList.add('active')
-    })
-
-    ratingElement.addEventListener('mouseleave', () => {
-        ratingElement.classList.remove('active')
-    })
+    ratingElement.addEventListener('mouseover', () => ratingElement.classList.add('active'))
+    ratingElement.addEventListener('mouseleave', () => ratingElement.classList.remove('active'))
+    ratingElement.addEventListener('click', () => ratingElement.classList.toggle('focus'))
 
     containerRating.append(ratingElement)
 }
