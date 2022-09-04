@@ -17,6 +17,7 @@ body {
     --body-color: hsl(216, 12%, 8%);
     --container-color: hsl(213, 19%, 18%);
     --btn-hover-color: hsl(25, 85%, 49%);
+    --btn-focus-color: hsl(217, 12%, 63%);
 }
 
 .container {
@@ -36,7 +37,7 @@ body {
     border-radius: 1rem;
 }
 
-.icon_star {
+img {
     background-color: hsla(216, 12%, 54%, 0.253);
     border-radius: 50%;
     padding: 1rem;
@@ -51,22 +52,20 @@ body {
 
 .rating_element {
     text-decoration: none;
+    font-size: 1rem;
     color: hsl(217, 12%, 63%);
     background-color: hsla(216, 12%, 54%, 0.253);
     border-radius: 50%;
+    border: none;
     padding: .8rem 1.3rem;
     transition: all .1s ease-in-out;
     cursor: pointer;
 }
 
-.focus {
+.rating_element:focus,
+.rating_element:active {
+    background: var(--btn-focus-color);
     color: white;
-    background-color: hsl(25, 97%, 53%);
-}
-
-.active {
-    color: white;
-    background-color: hsl(217, 12%, 63%);
 }
 
 .btn {
@@ -84,23 +83,32 @@ body {
     transition: all .2s ease-in-out;
 }
 
-.btn:hover {
+.active {
+    color: white;
     background-color: var(--btn-hover-color);
 }
 
-.btn:focus {
-    color: var(--btn-hover-color);
-    background-color: white;
-}
 
 .remove {
     display: none;
 }
 
-@media (max-width:750px) {
-    .container {
-        height: auto;
+.score {
+    width: fit-content;
+    color: var(--btn-hover-color);
+    padding: 8px 15px;
+    background-color: hsla(216, 12%, 54%, 0.253);
+    border-radius: 2rem;
+}
+
+@media (max-width:1150px) {
+
+    .grid_layout {
+        width: 60%;
     }
+}
+
+@media (max-width:750px) {
 
     .grid_layout {
         width: 90%;

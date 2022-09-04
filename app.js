@@ -10,7 +10,9 @@ container.append(gridLayout)
 
 const fristIcon = document.createElement('img')
 fristIcon.src = 'images/icon-star.svg'
-fristIcon.classList.add('icon_star')
+
+const scoreText = document.createElement('p')
+
 
 const title = document.createElement('h2')
 title.innerText = 'How did we do?'
@@ -21,15 +23,18 @@ aboutText.innerText = 'Please let us know how we did with your support request. 
 const containerRating = document.createElement('div')
 containerRating.classList.add('container_rating')
 
+let ratingArr = []
+
 for (let i = 1; i <= 5; i++) {
-    const ratingElement = document.createElement('btn')
+    const ratingElement = document.createElement('button')
     ratingElement.innerText = i
     ratingElement.classList.add('rating_element')
 
     ratingElement.addEventListener('mouseover', () => ratingElement.classList.add('active'))
     ratingElement.addEventListener('mouseleave', () => ratingElement.classList.remove('active'))
-    ratingElement.addEventListener('click', () => ratingElement.classList.toggle('focus'))
+    //ratingElement.addEventListener('click', () => ratingElement.classList.toggle('focus'))
 
+    ratingArr.push(ratingElement)
     containerRating.append(ratingElement)
 }
 
@@ -37,14 +42,25 @@ const button = document.createElement('button')
 button.innerText = 'SUBMIT'
 button.classList.add('btn')
 
-gridLayout.append(fristIcon, title, aboutText, containerRating, button)
+gridLayout.append(fristIcon, scoreText, title, aboutText, containerRating, button)
 
 // Creating second Page
 
+let ratingScore = 0
+
+ratingArr.forEach(element => {
+    element.addEventListener('click', () => ratingScore = element)
+})
+
+
+
 button.addEventListener('click', () => {
     fristIcon.src = 'images/illustration-thank-you.svg'
+    scoreText.classList.add('score')
+    scoreText.innerText = `You selected ${ratingScore.innerText} out of 5`
     title.innerText = 'Thanks you!'
     aboutText.innerText = `We appreciate you taking the time to give a rating, if you ever need more support, don't hesitate to get in touch`
     containerRating.classList.add('remove')
     button.classList.add('remove')
+
 })
